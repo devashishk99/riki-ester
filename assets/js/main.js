@@ -102,7 +102,7 @@ var translations = {
     it: {
         hero_title: 'si sposano!',
         hero_date: '15 GIUGNO 2026',
-        hero_tagline: "Unitevi a noi per celebrare l'amore sotto il sole toscano",
+        hero_tagline: "Unitevi a noi per celebrare l’amore nella città di Romeo e Giulietta.",
         nav_home: 'HOME',
         nav_story: 'STORIA',
         nav_details: 'DETTAGLI',
@@ -112,8 +112,8 @@ var translations = {
     },
     en: {
         hero_title: 'are getting married!',
-        hero_date: 'JUNE 15, 2026',
-        hero_tagline: 'Join us in celebrating love under the Tuscan sun',
+        hero_date: 'APRIL 15, 2026',
+        hero_tagline: 'Join us in celebrating love in the city of Romeo and Juliet.',
         nav_home: 'HOME',
         nav_story: 'STORY',
         nav_details: 'DETAILS',
@@ -150,6 +150,7 @@ if('serviceWorker' in navigator){
         navigator.serviceWorker.register('/service-worker.js').catch(function(){});
     });
 }
+
 
 
 
