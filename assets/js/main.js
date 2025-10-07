@@ -9,9 +9,9 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
     });
 });
 
-// Countdown timer to June 15, 2026 15:00 local time
+// Countdown timer to April 11, 2026 09:00 local time
 function startCountdown(targetId){
-    var targetDate = new Date('2026-04-04T15:00:00');
+    var targetDate = new Date('2026-04-11T09:00:00');
     function update(){
         var now = new Date();
         var diff = targetDate - now;
@@ -150,5 +150,6 @@ if('serviceWorker' in navigator){
         navigator.serviceWorker.register('/service-worker.js').catch(function(){});
     });
 }
+
 
 
