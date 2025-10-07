@@ -1,0 +1,10 @@
+{
+  "name": "Riccardo & Ester Wedding",
+  "short_name": "R&E Wedding",
+  "start_url": "/app.html",
+  "display": "standalone",
+  "background_color": "#f5f5f0",
+  "theme_color": "#6b5538",
+  "icons": []
+}
+

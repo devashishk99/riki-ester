@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom fonts */
+@font-face {
+    font-family: 'Brillant';
+    src: url('../fonts/brillant.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TheMunday';
+    src: url('../fonts/Themundayfreeversion-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Swanley';
+    src: url('../fonts/Swanley Free.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Rallomy';
+    src: url('../fonts/Rallomy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Foga';
+    src: url('../fonts/FogaDemo-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Stoneforge';
+    src: url('../fonts/Stoneforge Free.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'WastedVindey';
+    src: url('../fonts/Wasted-Vindey.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'WastedVindey', 'Foga', 'Rallomy', 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f1f5f2 0%, #e3eee6 100%);
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+/* Removed mockup frames; single responsive layout */
+
+/* Navigation */
+.top-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-links { display: flex; gap: 30px; }
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+.nav-links a:hover { opacity: 0.7; }
+
+.lang-switch { display: flex; gap: 10px; align-items: center; }
+.lang-switch button {
+    background: none; border: none; font-size: 20px; cursor: pointer;
+    opacity: 0.7; transition: opacity 0.3s, transform 0.2s;
+}
+.lang-switch button:hover { opacity: 1; transform: scale(1.1); }
+.lang-switch button.active { opacity: 1; }
+
+/* Sticky Navigation */
+.sticky-nav {
+    position: sticky; top: 0; left: 0; right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    box-shadow: 0 2px 20px rgba(20, 60, 35, 0.15);
+    z-index: 1000; border-bottom: 1px solid rgba(60, 120, 80, 0.25);
+}
+.sticky-nav .logo { font-family: 'Stoneforge', 'Playfair Display', serif; font-size: 24px; color: #2f5d3a; }
+.sticky-nav .nav-links a { color: #2f5d3a; }
+.swiper-button-prev, .swiper-button-next { display: none; }
+.sticky-nav .lang-switch button { opacity: 0.6; }
+.sticky-nav .lang-switch button:hover,
+.sticky-nav .lang-switch button.active { opacity: 1; }
+
+/* Website Styles */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2f5d3a 0%, #355e3b 40%, #4d7c57 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: white; text-align: center; padding: 40px; position: relative;
+}
+.hero::before { content: ''; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 64px; margin-bottom: 20px; font-weight: 400; }
+.hero .names { font-family: 'Brillant', 'Playfair Display', serif; font-size: 72px; line-height: 1.1; display: block; }
+.hero .subtitle { font-family: 'TheMunday', cursive; font-size: 36px; display: block; margin-top: 8px; }
+.hero .date { font-size: 24px; font-weight: 300; letter-spacing: 2px; }
+
+.section { padding: 80px 60px; background: white; }
+.section:nth-child(even) { background: #eef6f0; }
+.section h2 { font-family: 'Swanley', 'Playfair Display', serif; font-size: 42px; color: #2f5d3a; text-align: center; margin-bottom: 40px; }
+.section p { color: #2f5d3a; line-height: 1.8; max-width: 700px; margin: 0 auto 30px; text-align: center; }
+
+.love-story { display: flex; gap: 40px; align-items: center; max-width: 1000px; margin: 0 auto; }
+.story-image {
+    width: 300px; height: 300px; background: linear-gradient(135deg, #d4c5a9 0%, #8b7355 100%);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 60px; flex-shrink: 0;
+}
+
+.wedding-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1000px; margin: 0 auto; }
+.detail-card { background: white; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 4px 15px rgba(20, 60, 35, 0.12); }
+.detail-card h3 { font-family: 'Playfair Display', serif; color: #2f5d3a; font-size: 24px; margin-bottom: 15px; }
+
+.rsvp-form { max-width: 500px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(107, 85, 56, 0.1); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; color: #6b5538; margin-bottom: 8px; font-weight: 500; }
+.form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #a3b18a; border-radius: 4px; font-family: inherit; }
+.submit-btn { width: 100%; padding: 15px; background: #355e3b; color: white; border: none; border-radius: 4px; font-family: inherit; font-size: 16px; cursor: pointer; transition: background 0.3s; }
+.submit-btn:hover { background: #2b4d30; }
+
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
+.gallery-item { aspect-ratio: 1; background: linear-gradient(135deg, #a3b18a 0%, #355e3b 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+
+.footer { background: #2f5d3a; color: white; padding: 40px; text-align: center; }
+.footer p { color: white; opacity: 0.9; }
+
+/* Mobile Specific Styles */
+/* Responsive tweaks */
+@media (max-width: 1024px){
+  .section { padding: 60px 30px; }
+}
+@media (max-width: 768px){
+  .top-nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 24px; }
+  .hero h1 { font-size: 40px; }
+  .hero .names { font-size: 42px; }
+  .hero .subtitle { font-size: 24px; }
+  .hero .date { font-size: 18px; }
+  .love-story { flex-direction: column; }
+  .story-image { width: 100%; height: 200px; }
+  .wedding-details { grid-template-columns: 1fr; gap: 20px; }
+  .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .gallery-item { font-size: 30px; }
+  .rsvp-form { padding: 20px; }
+}
+
+.label { position: absolute; top: -30px; left: 0; font-family: 'Playfair Display', serif; font-size: 20px; color: #6b5538; }
+.desktop-wrapper { display: none; }
+.mobile-wrapper { display: none; }
+
+/* Scroll indicator for demo */
+.scroll-indicator {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    color: white; font-size: 12px; opacity: 0.7; text-align: center;
+}
+.scroll-indicator::before { content: '↓'; display: block; font-size: 24px; animation: bounce 2s infinite; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+
+
