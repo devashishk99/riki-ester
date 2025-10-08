@@ -82,11 +82,10 @@ if(rsvpForm){
         var endpoint = rsvpForm.getAttribute('data-endpoint') || 'https://script.google.com/macros/s/YOUR_APPS_SCRIPT_DEPLOYMENT_ID/exec';
         fetch(endpoint, {
             method: 'POST',
+            mode: 'no-cors',
             body: formData
-        }).then(function(res){
-            if(!res.ok) throw new Error('Errore');
-            return res.json();
         }).then(function(){
+            // Opaque response (no-cors). Assume success if network didn’t fail.
             status.textContent = 'Grazie! La tua conferma è stata registrata.';
             status.style.color = '#2f855a';
             rsvpForm.reset();
@@ -150,6 +149,7 @@ if('serviceWorker' in navigator){
         navigator.serviceWorker.register('/service-worker.js').catch(function(){});
     });
 }
+
 
 
 
