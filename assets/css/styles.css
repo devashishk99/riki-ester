@@ -82,29 +82,44 @@ body {
 }
 
 .quote-section {
-    margin-bottom: 60px;
-    padding: 40px;
-    border-top: 1px solid rgba(139, 69, 19, 0.2);
-    border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+    margin: 50px 0;
+    padding: 30px 40px;
+    text-align: center;
 }
 
 .quote-text {
-    font-size: 20px;
+    font-size: 18px;
     font-style: italic;
     color: #722F37;
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-.quote-author {
-    font-size: 16px;
-    color: #8B7355;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    opacity: 0.9;
     font-weight: 300;
 }
 
+.quote-author {
+    font-size: 14px;
+    color: #8B7355;
+    font-weight: 400;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+}
+
 .invitation-header {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     padding: 0 40px;
+}
+
+.header-image {
+    margin-bottom: 30px;
+}
+
+.header-decoration {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.8;
 }
 
 .invitation-header h1 { 
@@ -139,7 +154,7 @@ body {
 }
 
 .invitation-message {
-    margin: 60px 0;
+    margin: 40px 0 60px 0;
     padding: 0 40px;
     font-size: 20px;
     font-style: italic;
@@ -306,8 +321,21 @@ body {
         padding: 0 20px;
     }
     
+    .header-decoration {
+        max-width: 150px;
+    }
+    
     .quote-section {
-        padding: 30px 20px;
+        margin: 35px 0;
+        padding: 25px 20px;
+    }
+    
+    .quote-text {
+        font-size: 16px;
+    }
+    
+    .quote-author {
+        font-size: 13px;
     }
     
     .lang-switch-floating {
@@ -408,8 +436,21 @@ body {
         padding: 0 15px;
     }
     
+    .header-decoration {
+        max-width: 120px;
+    }
+    
     .quote-section {
-        padding: 25px 15px;
+        margin: 30px 0;
+        padding: 20px 15px;
+    }
+    
+    .quote-text {
+        font-size: 15px;
+    }
+    
+    .quote-author {
+        font-size: 12px;
     }
     
     .mountains-image {
@@ -428,8 +469,21 @@ body {
         padding: 0 10px;
     }
     
+    .header-decoration {
+        max-width: 100px;
+    }
+    
     .quote-section {
-        padding: 20px 10px;
+        margin: 25px 0;
+        padding: 15px 10px;
+    }
+    
+    .quote-text {
+        font-size: 14px;
+    }
+    
+    .quote-author {
+        font-size: 11px;
     }
     
     .names {
