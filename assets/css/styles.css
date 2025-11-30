@@ -112,14 +112,53 @@ body {
 
 .header-image {
     margin-bottom: 30px;
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-decoration {
     max-width: 200px;
     height: auto;
-    display: block;
+    position: absolute;
     margin: 0 auto;
-    opacity: 0.8;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.header-img-1 {
+    animation: fadeImages 6s infinite;
+    animation-delay: 0s;
+}
+
+.header-img-2 {
+    animation: fadeImages 6s infinite;
+    animation-delay: 2s;
+}
+
+.header-img-3 {
+    animation: fadeImages 6s infinite;
+    animation-delay: 4s;
+}
+
+@keyframes fadeImages {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.8;
+    }
+    28.33% {
+        opacity: 0.8;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .invitation-header h1 { 
@@ -321,6 +360,10 @@ body {
         padding: 0 20px;
     }
     
+    .header-image {
+        height: 150px;
+    }
+    
     .header-decoration {
         max-width: 150px;
     }
@@ -436,6 +479,10 @@ body {
         padding: 0 15px;
     }
     
+    .header-image {
+        height: 120px;
+    }
+    
     .header-decoration {
         max-width: 120px;
     }
@@ -467,6 +514,10 @@ body {
     .invitation-header,
     .invitation-message {
         padding: 0 10px;
+    }
+    
+    .header-image {
+        height: 100px;
     }
     
     .header-decoration {
