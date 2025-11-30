@@ -11,12 +11,6 @@ assets/icons/mountains.jpeg
 *.bmp
 *.tiff
 
-# Font files that might be large
-*.otf
-*.ttf
-*.woff
-*.woff2
-
 # Other large files
 *.zip
 *.tar.gz
