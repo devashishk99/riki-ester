@@ -1,0 +1,23 @@
+# Large image files
+assets/icons/flora_avorio.jpg
+assets/icons/mountains.png
+assets/icons/mountains.jpeg
+
+# All image files to prevent future issues
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+
+# Font files that might be large
+*.otf
+*.ttf
+*.woff
+*.woff2
+
+# Other large files
+*.zip
+*.tar.gz
+*.rar

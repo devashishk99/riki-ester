@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 /* Custom fonts */
 @font-face {
     font-family: 'Krakatau Mountain';
@@ -13,19 +19,24 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'Acumin';
-    src: url('../fonts/AcuminVariableConcept.otf') format('opentype');
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    font-variation-settings: 'wght' 300, 'wdth' 150, 'slnt' 0;
 }
 
 body {
-    font-family: 'Acumin', sans-serif;
-    background: #f0e9db;
+    font-family: 'Raleway', sans-serif;
+    background-image: url('/assets/icons/flora_avorio.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
     padding: 0;
     min-height: 100vh;
+    width: 100%;
 }
 
 /* Removed mockup frames; single responsive layout */
@@ -41,8 +52,8 @@ body {
     align-items: center;
 }
 .lang-switch-floating button {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -50,28 +61,29 @@ body {
     cursor: pointer;
     opacity: 0.8;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
 }
 .lang-switch-floating button:hover { opacity: 1; transform: scale(1.1); }
 .lang-switch-floating button.active { 
     opacity: 1; 
-    background: rgba(255, 255, 255, 0.4);
-    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
 }
 
 /* Seamless Invitation Styles */
 .invitation {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px 40px;
+    width: 100vw;
+    margin: 0;
+    padding: 60px 0 0 0;
     text-align: center;
     color: #8B4513;
     line-height: 1.6;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.5px);
 }
 
 .quote-section {
     margin-bottom: 60px;
-    padding: 40px 20px;
+    padding: 40px;
     border-top: 1px solid rgba(139, 69, 19, 0.2);
     border-bottom: 1px solid rgba(139, 69, 19, 0.2);
 }
@@ -92,10 +104,11 @@ body {
 
 .invitation-header {
     margin-bottom: 80px;
+    padding: 0 40px;
 }
 
 .invitation-header h1 { 
-    font-family: 'Acumin', sans-serif; 
+    font-family: 'Raleway', sans-serif; 
     font-size: 48px; 
     margin-bottom: 30px; 
     font-weight: 400; 
@@ -112,7 +125,7 @@ body {
 }
 
 .subtitle { 
-    font-family: 'Acumin', sans-serif; 
+    font-family: 'Raleway', sans-serif; 
     font-size: 28px; 
     display: block; 
     margin-top: 15px;
@@ -122,12 +135,12 @@ body {
 .date { 
     font-size: 24px; 
     font-weight: 300;
-    letter-spacing: 1px;
     margin-top: 20px;
 }
 
 .invitation-message {
     margin: 60px 0;
+    padding: 0 40px;
     font-size: 20px;
     font-style: italic;
     opacity: 0.9;
@@ -140,12 +153,9 @@ body {
 }
 
 .wedding-ceremony, .wedding-reception {
-    margin: 60px 0;
+    max-width: 600px;
+    margin: 60px auto;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .ceremony-details h3, .reception-details h3 {
@@ -194,11 +204,9 @@ body {
 }
 
 .gift-content {
-    background: rgba(255, 255, 255, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
     padding: 30px;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .gift-content h4 {
@@ -216,9 +224,6 @@ body {
 .bank-details {
     margin-top: 25px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .bank-details p {
@@ -251,24 +256,30 @@ body {
 
 .invitation-closing {
     margin-top: 80px;
+    margin-bottom: 0;
     font-size: 18px;
 }
 
-.signature {
-    font-family: 'Krakatau Mountain', serif;
-    font-size: 32px;
-    margin-top: 15px;
-    color: #722F37;
+.closing-image {
+    margin-bottom: 0;
+    overflow: hidden;
 }
 
+.mountains-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+
 .rsvp-form { 
-    max-width: 400px; 
+    max-width: 500px; 
     margin: 0 auto; 
-    background: rgba(255, 255, 255, 0.2); 
     padding: 30px; 
-    border-radius: 12px; 
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.3); 
 }
 .form-group { margin-bottom: 20px; }
 .form-group label { display: block; color: #8B7355; margin-bottom: 8px; font-weight: 500; }
@@ -277,10 +288,26 @@ body {
 .submit-btn:hover { background: #8B4513; }
 
 
+/* Mobile background fix */
+@media (max-width: 1024px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .invitation {
-        padding: 40px 20px;
+        padding: 40px 0 0 0;
+    }
+    
+    .invitation-header,
+    .invitation-message {
+        padding: 0 20px;
+    }
+    
+    .quote-section {
+        padding: 30px 20px;
     }
     
     .lang-switch-floating {
@@ -355,12 +382,70 @@ body {
         margin-left: 5px;
     }
     
-    .signature {
-        font-size: 28px;
+    .closing-image {
+        margin-bottom: 0;
+    }
+    
+    .mountains-image {
+        max-height: 300px;
+    }
+    
+    
+}
+
+    .mountains-image {
+        max-height: 250px;
+    }
+
+/* Additional responsive breakpoints */
+@media (max-width: 480px) {
+    .invitation {
+        padding: 30px 0 0 0;
+    }
+    
+    .invitation-header,
+    .invitation-message {
+        padding: 0 15px;
+    }
+    
+    .quote-section {
+        padding: 25px 15px;
+    }
+    
+    .mountains-image {
+        max-height: 200px;
+    }
+    
+}
+
+@media (max-width: 320px) {
+    .invitation {
+        padding: 20px 0 0 0;
+    }
+    
+    .invitation-header,
+    .invitation-message {
+        padding: 0 10px;
+    }
+    
+    .quote-section {
+        padding: 20px 10px;
+    }
+    
+    .names {
+        font-size: 40px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+    }
+    
+    .mountains-image {
+        max-height: 180px;
     }
 }
 
-.label { position: absolute; top: -30px; left: 0; font-family: 'Acumin', sans-serif; font-size: 20px; color: #8B7355; }
+.label { position: absolute; top: -30px; left: 0; font-family: 'Raleway', sans-serif; font-size: 20px; color: #8B7355; }
 .desktop-wrapper { display: none; }
 .mobile-wrapper { display: none; }
 

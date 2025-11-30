@@ -74,8 +74,8 @@ if(rsvpForm){
 // Simple i18n support (IT/EN)
 var translations = {
     it: {
-        quote_text: '"L\'amore è la poesia dei sensi."',
-        quote_author: '- Honoré de Balzac',
+        quote_text: "'Non c'è nulla di impossibile quando si sa pregare e lottare.'",
+        quote_author: '- S. Agostino',
         hero_names: 'Riccardo ed Ester',
         hero_title: 'annunciano il loro matrimonio!',
         hero_date: 'Sabato 11 Aprile, 2026',
@@ -98,12 +98,11 @@ var translations = {
         gift_message: 'Se vorrai farci un regalo, potrai farlo lasciando un contributo alle seguenti coordinate.',
         gift_recipient: 'Intestatario:',
         gift_names: 'Riccardo Ester',
-        copy_iban: 'Copia',
-        closing_message: 'Con amore,'
+        copy_iban: 'Copia'
     },
     en: {
-        quote_text: '"Love is the poetry of the senses."',
-        quote_author: '- Honoré de Balzac',
+        quote_text: '"Nothing is impossible when one knows how to pray and fight."',
+        quote_author: '- S. Agostino',
         hero_names: 'Riccardo and Ester',
         hero_title: 'are getting married!',
         hero_date: 'Saturday April 11th, 2026',
@@ -126,8 +125,7 @@ var translations = {
         gift_message: 'If you would like to give us a gift, you can do so by making a contribution to the following details.',
         gift_recipient: 'Account Holder:',
         gift_names: 'Riccardo Ester',
-        copy_iban: 'Copy',
-        closing_message: 'With love,'
+        copy_iban: 'Copy'
     }
 };
 
@@ -137,12 +135,12 @@ function applyTranslations(lang){
         var key = node.getAttribute('data-i18n');
         if(dict[key]){ node.textContent = dict[key]; }
     });
-    document.querySelectorAll('.lang-switch button').forEach(function(btn){
+    document.querySelectorAll('.lang-switch-floating button').forEach(function(btn){
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
 }
 
-document.querySelectorAll('.lang-switch button').forEach(function(btn){
+document.querySelectorAll('.lang-switch-floating button').forEach(function(btn){
     btn.addEventListener('click', function(){
         var lang = btn.getAttribute('data-lang');
         applyTranslations(lang);
