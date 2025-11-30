@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Website Mockup - Riccardo & Ester</title>
     <meta name="description" content="Riccardo & Ester si sposano il 15 Giugno 2026 in Toscana. Unisciti a noi!">
-    <meta name="theme-color" content="#6b5538">
+    <meta name="theme-color" content="#8B4513">
     <meta property="og:title" content="Riccardo & Ester - 15 Giugno 2026">
     <meta property="og:description" content="Unitevi a noi per celebrare l'amore sotto il sole toscano">
     <meta property="og:type" content="website">
@@ -14,7 +14,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO1rLhoAAAAASUVORK5CYII=" sizes="32x32">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- UI Libraries -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
@@ -23,100 +22,93 @@
 </head>
 <body>
                 <!-- Hero with Top Nav -->
-    <div class="hero" id="home">
-                    <div class="top-nav">
-                        <div class="nav-links">
-                            <a href="#home" data-i18n="nav_home">HOME</a>
-                            <a href="#storia" data-i18n="nav_story">STORIA</a>
-                            <a href="#dettagli" data-i18n="nav_details">DETTAGLI</a>
-                            <a href="#rsvp" data-i18n="nav_rsvp">RSVP</a>
-                            <a href="#gallery" data-i18n="nav_gallery">GALLERY</a>
-                        </div>
-                        <div class="lang-switch">
-                            <button class="active" data-lang="it">🇮🇹</button>
-                            <button data-lang="en">🇬🇧</button>
-                        </div>
-                    </div>
-                    <h1>
-                        <span class="names">Ester & Riccardo</span>
-                        <span class="subtitle" data-i18n="hero_title">are getting married!</span>
-                    </h1>
-                    <div class="date" data-i18n="hero_date">11 APRILE 2026</div>
-                    <div class="tagline" data-i18n="hero_tagline" style="margin-top:10px; opacity:0.9;">Unitevi a noi per celebrare l’amore nella città di Romeo e Giulietta.</div><br>
-                    <div id="countdown" class="mt-4" style="font-size:18px; letter-spacing: 1px; opacity: 0.9;"></div>
-                    <div class="scroll-indicator"></div>
-                </div>
+    <!-- Seamless Invitation -->
+    <div class="invitation">
+        <!-- Language Switch (Floating) -->
+        <div class="lang-switch-floating">
+            <button class="active" data-lang="it">🇮🇹</button>
+            <button data-lang="en">🇬🇧</button>
+        </div>
 
-                <!-- Sticky Navigation -->
-                <div class="sticky-nav">
-                    <div class="logo">R & E</div>
-                    <div class="nav-links">
-                        <a href="#home" data-i18n="nav_home">HOME</a>
-                        <a href="#storia" data-i18n="nav_story">STORIA</a>
-                        <a href="#dettagli" data-i18n="nav_details">DETTAGLI</a>
-                        <a href="#rsvp" data-i18n="nav_rsvp">RSVP</a>
-                        <a href="#gallery" data-i18n="nav_gallery">GALLERY</a>
-                    </div>
-                    <div class="lang-switch">
-                        <button class="active" data-lang="it">🇮🇹</button>
-                        <button data-lang="en">🇬🇧</button>
-                    </div>
-                </div>
+        <!-- Inspirational Quote -->
+        <div class="quote-section">
+            <p class="quote-text" data-i18n="quote_text">"L'amore è la poesia dei sensi."</p>
+            <p class="quote-author" data-i18n="quote_author">- Honoré de Balzac</p>
+        </div>
 
-    <!-- SPA Sections -->
-    <div class="section" id="storia">
-        <h2>La Nostra Storia</h2>
-        <div class="swiper love-story-swiper" style="max-width: 1000px; margin: 0 auto;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><div class="love-story"><div class="story-image">💑</div><div><p>Il nostro viaggio è iniziato cinque anni fa in una piccola caffetteria nel centro di Roma. Un incontro casuale che ha cambiato le nostre vite per sempre.</p><p>Tra risate e cappuccini, è nata una storia d'amore.</p></div></div></div>
-                <div class="swiper-slide"><div class="love-story"><div class="story-image">💍</div><div><p>La proposta è arrivata al tramonto tra i vigneti toscani.</p><p>Un sì sussurrato, un abbraccio, e un nuovo capitolo.</p></div></div></div>
-                <div class="swiper-slide"><div class="love-story"><div class="story-image">✈️</div><div><p>Viaggi, scoperte, e piccoli momenti quotidiani che ci hanno resi una squadra.</p><p>Ora non vediamo l'ora di festeggiare con voi.</p></div></div></div>
+        <!-- Names & Announcement -->
+        <div class="invitation-header">
+            <h1>
+                <span class="names" data-i18n="hero_names">Riccardo ed Ester</span>
+                <span class="subtitle" data-i18n="hero_title">annunciano il loro matrimonio!</span>
+            </h1>
+            <div class="date" data-i18n="hero_date">Sabato 11 Aprile, 2026</div>
+        </div>
+
+        <!-- Invitation Message -->
+        <div class="invitation-message">
+            <p data-i18n="invitation_message">Vi invitiamo a celebrare con noi questo giorno speciale</p>
+        </div>
+
+        <!-- Photo Gallery Placeholder (for future photos) -->
+        <div class="photo-gallery-placeholder">
+            <!-- Photos will be added here later -->
+        </div>
+
+        <!-- Wedding Details -->
+        <div class="wedding-ceremony">
+            <div class="ceremony-details">
+                <h3 data-i18n="ceremony_title">Cerimonia Religiosa</h3>
+                <p data-i18n="ceremony_location">Chiesa dei Santi Filippo e Giacomo Apostoli</p>
+                <p data-i18n="ceremony_address">Parona, Verona</p>
+                <p data-i18n="ceremony_time">ore 11:00</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Chiesa+dei+Santi+Filippo+e+Giacomo+Apostoli+Parona+Verona" target="_blank" rel="noopener" class="map-link" data-i18n="view_map">Visualizza Mappa ↗</a>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
-    </div>
 
-    <div class="section" id="dettagli">
-        <h2>Dettagli del Matrimonio</h2>
-        <div class="wedding-details">
-            <div class="detail-card"><h3>Cerimonia</h3><p>Chiesa di San Pietro ⛪</p><p>15:00</p><p><a href="https://www.google.com/maps/search/?api=1&query=Chiesa%20di%20San%20Pietro%20Via%20Roma%20123%2C%20Firenze" target="_blank" rel="noopener" style="color:#2f5d3a; text-decoration: underline;">Via Roma 123, Firenze ↗</a></p><div style="margin-top:15px; border-radius:8px; overflow:hidden;"><iframe title="Mappa Cerimonia" src="https://www.google.com/maps?q=Chiesa%20di%20San%20Pietro%20Via%20Roma%20123%2C%20Firenze&output=embed" width="100%" height="180" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div>
-            <div class="detail-card"><h3>Ricevimento</h3><p>Villa Toscana 🍷</p><p>18:00</p><p><a href="https://www.google.com/maps/search/?api=1&query=Villa%20Toscana%20Strada%20del%20Chianti%2045" target="_blank" rel="noopener" style="color:#2f5d3a; text-decoration: underline;">Strada del Chianti 45 ↗</a></p><div style="margin-top:15px; border-radius:8px; overflow:hidden;"><iframe title="Mappa Ricevimento" src="https://www.google.com/maps?q=Villa%20Toscana%20Strada%20del%20Chianti%2045&output=embed" width="100%" height="180" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div>
-            
-        </div>
-    </div>
-
-    <div class="section" id="rsvp">
-        <h2>RSVP</h2>
-        <div class="rsvp-form">
-            <form id="rsvp-form" data-endpoint="https://script.google.com/macros/s/AKfycbxbnJcieLpr-0qcTBZ0oPcFVgr0Ngev_-8YGH83S-RLSoi6kuTJ1dUTKNCkgP4yueBT/exec">
-                <div class="form-group"><label>Nome Completo</label><input name="name" type="text" placeholder="Il tuo nome" required></div>
-                <div class="form-group"><label>Email</label><input name="email" type="email" placeholder="tua@email.com" required></div>
-                <div class="form-group"><label>Numero di Ospiti</label><select name="guests" required><option value="1">1</option><option value="2">2</option><option value="3+">3+</option></select></div>
-                <button type="submit" class="submit-btn">Conferma Presenza</button>
-                <p id="rsvp-status" style="margin-top:12px; font-size:14px; color:#2f5d3a;"></p>
-            </form>
-        </div>
-    </div>
-
-    <div class="section" id="gallery">
-        <h2 data-i18n="gallery_title">Galleria</h2>
-        <div class="swiper gallery-swiper" style="max-width: 1000px; margin: 0 auto;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><div class="gallery-item">📷</div></div>
-                <div class="swiper-slide"><div class="gallery-item">📷</div></div>
-                <div class="swiper-slide"><div class="gallery-item">📷</div></div>
-                <div class="swiper-slide"><div class="gallery-item">📷</div></div>
+        <div class="wedding-reception">
+            <div class="reception-details">
+                <h3 data-i18n="reception_title">Ricevimento</h3>
+                <p data-i18n="reception_location">Ristorante Serenità</p>
+                <p data-i18n="reception_address">Via Venturelli, 46 – Valeggio sul Mincio (Verona)</p>
+                <p data-i18n="reception_time">a seguire</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Ristorante+Serenità+Via+Venturelli+46+Valeggio+sul+Mincio+Verona" target="_blank" rel="noopener" class="map-link" data-i18n="view_map">Visualizza Mappa ↗</a>
             </div>
-            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- RSVP Section -->
+        <div class="rsvp-section">
+            <h3 data-i18n="rsvp_title">Confermate la vostra presenza</h3>
+            <div class="rsvp-form">
+                <form id="rsvp-form" data-endpoint="https://script.google.com/macros/s/AKfycbxbnJcieLpr-0qcTBZ0oPcFVgr0Ngev_-8YGH83S-RLSoi6kuTJ1dUTKNCkgP4yueBT/exec">
+                    <div class="form-group"><label data-i18n="form_name">Nome Completo</label><input name="name" type="text" placeholder="Il tuo nome" required></div>
+                    <div class="form-group"><label>Email</label><input name="email" type="email" placeholder="tua@email.com" required></div>
+                    <div class="form-group"><label data-i18n="form_guests">Numero di Ospiti</label><select name="guests" required><option value="1">1</option><option value="2">2</option><option value="3+">3+</option></select></div>
+                    <button type="submit" class="submit-btn" data-i18n="form_submit">Conferma Presenza</button>
+                    <p id="rsvp-status" style="margin-top:12px; font-size:14px; color:#8B4513;"></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Wedding Gift Section -->
+        <div class="gift-section">
+            <h3 data-i18n="gift_title">Regalo di nozze</h3>
+            <div class="gift-content">
+                <h4 data-i18n="gift_method">Bonifico</h4>
+                <p data-i18n="gift_message">Se vorrai farci un regalo, potrai farlo lasciando un contributo alle seguenti coordinate.</p>
+                <div class="bank-details">
+                    <p><strong data-i18n="gift_recipient">Intestatario:</strong> <span data-i18n="gift_names">Riccardo Ester</span></p>
+                    <p><strong>IBAN:</strong> <span id="iban-text">XXX</span> <button id="copy-iban" class="copy-btn" title="Copia IBAN"><i class="fa-regular fa-copy"></i> <span data-i18n="copy_iban">Copia</span></button></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Closing Message -->
+        <div class="invitation-closing">
+            <p data-i18n="closing_message">Con amore,</p>
+            <p class="signature" data-i18n="hero_names">Riccardo ed Ester</p>
         </div>
     </div>
-
-                <div class="footer">
-                    <p>Con amore, Riccardo & Ester</p>
-                    <p style="margin-top: 10px; font-size: 14px;">11 Aprile 2025 • Verona, Italia</p>
-                </div>
     <!-- JS Libraries -->
     <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

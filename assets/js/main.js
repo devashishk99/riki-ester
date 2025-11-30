@@ -9,31 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
     });
 });
 
-// Countdown timer to April 11, 2026 09:00 local time
-function startCountdown(targetId){
-    var targetDate = new Date('2026-04-11T09:00:00');
-    function update(){
-        var now = new Date();
-        var diff = targetDate - now;
-        if(diff <= 0){
-            var elDone = document.getElementById(targetId);
-            if(elDone){ elDone.textContent = 'Oggi è il grande giorno!'; }
-            return;
-        }
-        var days = Math.floor(diff / (1000*60*60*24));
-        var hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-        var mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-        var secs = Math.floor((diff % (1000*60)) / 1000);
-        var el = document.getElementById(targetId);
-        if(el){
-            el.textContent = days + ' giorni • ' + String(hours).padStart(2,'0') + ':' + String(mins).padStart(2,'0') + ':' + String(secs).padStart(2,'0');
-        }
-    }
-    update();
-    return setInterval(update, 1000);
-}
-startCountdown('countdown');
-startCountdown('countdown-mobile');
 
 // Copy IBAN
 var copyBtn = document.getElementById('copy-iban');
@@ -99,26 +74,60 @@ if(rsvpForm){
 // Simple i18n support (IT/EN)
 var translations = {
     it: {
-        hero_title: 'si sposano!',
-        hero_date: '15 GIUGNO 2026',
-        hero_tagline: "Unitevi a noi per celebrare l’amore nella città di Romeo e Giulietta.",
-        nav_home: 'HOME',
-        nav_story: 'STORIA',
-        nav_details: 'DETTAGLI',
-        nav_rsvp: 'RSVP',
-        nav_gallery: 'GALLERY',
-        gallery_title: 'Galleria'
+        quote_text: '"L\'amore è la poesia dei sensi."',
+        quote_author: '- Honoré de Balzac',
+        hero_names: 'Riccardo ed Ester',
+        hero_title: 'annunciano il loro matrimonio!',
+        hero_date: 'Sabato 11 Aprile, 2026',
+        invitation_message: 'Vi invitiamo a celebrare con noi questo giorno speciale',
+        ceremony_title: 'Cerimonia Religiosa',
+        ceremony_location: 'Chiesa dei Santi Filippo e Giacomo Apostoli',
+        ceremony_time: 'ore 11:00',
+        ceremony_address: 'Parona, Verona',
+        reception_title: 'Ricevimento',
+        reception_location: 'Ristorante Serenità',
+        reception_time: 'a seguire',
+        reception_address: 'Via Venturelli, 46 – Valeggio sul Mincio (Verona)',
+        view_map: 'Visualizza Mappa ↗',
+        rsvp_title: 'Confermate la vostra presenza',
+        form_name: 'Nome Completo',
+        form_guests: 'Numero di Ospiti',
+        form_submit: 'Conferma Presenza',
+        gift_title: 'Regalo di nozze',
+        gift_method: 'Bonifico',
+        gift_message: 'Se vorrai farci un regalo, potrai farlo lasciando un contributo alle seguenti coordinate.',
+        gift_recipient: 'Intestatario:',
+        gift_names: 'Riccardo Ester',
+        copy_iban: 'Copia',
+        closing_message: 'Con amore,'
     },
     en: {
+        quote_text: '"Love is the poetry of the senses."',
+        quote_author: '- Honoré de Balzac',
+        hero_names: 'Riccardo and Ester',
         hero_title: 'are getting married!',
-        hero_date: 'APRIL 15, 2026',
-        hero_tagline: 'Join us in celebrating love in the city of Romeo and Juliet.',
-        nav_home: 'HOME',
-        nav_story: 'STORY',
-        nav_details: 'DETAILS',
-        nav_rsvp: 'RSVP',
-        nav_gallery: 'GALLERY',
-        gallery_title: 'Gallery'
+        hero_date: 'Saturday April 11th, 2026',
+        invitation_message: 'We invite you to celebrate this special day with us',
+        ceremony_title: 'Religious Ceremony',
+        ceremony_location: 'Chiesa dei Santi Filippo e Giacomo Apostoli',
+        ceremony_time: '11:00 AM',
+        ceremony_address: 'Parona, Verona',
+        reception_title: 'Reception',
+        reception_location: 'Ristorante Serenità',
+        reception_time: 'to follow',
+        reception_address: 'Via Venturelli, 46 – Valeggio sul Mincio (Verona)',
+        view_map: 'View Map ↗',
+        rsvp_title: 'Please confirm your attendance',
+        form_name: 'Full Name',
+        form_guests: 'Number of Guests',
+        form_submit: 'Confirm Attendance',
+        gift_title: 'Wedding Gift',
+        gift_method: 'Bank Transfer',
+        gift_message: 'If you would like to give us a gift, you can do so by making a contribution to the following details.',
+        gift_recipient: 'Account Holder:',
+        gift_names: 'Riccardo Ester',
+        copy_iban: 'Copy',
+        closing_message: 'With love,'
     }
 };
 
