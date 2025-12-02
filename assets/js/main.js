@@ -53,7 +53,7 @@ if(rsvpForm){
         var status = document.getElementById('rsvp-status');
         var formData = new FormData(rsvpForm);
         status.textContent = 'Invio in corso...';
-        status.style.color = '#6b5538';
+        status.style.color = '#330008';
         var endpoint = rsvpForm.getAttribute('data-endpoint') || 'https://script.google.com/macros/s/YOUR_APPS_SCRIPT_DEPLOYMENT_ID/exec';
         fetch(endpoint, {
             method: 'POST',
@@ -80,6 +80,7 @@ var translations = {
         hero_title: 'annunciano il loro matrimonio!',
         hero_date: 'Sabato 11 Aprile, 2026',
         invitation_message: 'Vi invitiamo a celebrare con noi questo giorno speciale',
+        details_header: 'Dettagli dell\'Evento',
         ceremony_title: 'Cerimonia Religiosa',
         ceremony_location: 'Chiesa dei Santi Filippo e Giacomo Apostoli',
         ceremony_time: 'ore 11:00',
@@ -107,6 +108,7 @@ var translations = {
         hero_title: 'are getting married!',
         hero_date: 'Saturday April 11th, 2026',
         invitation_message: 'We invite you to celebrate this special day with us',
+        details_header: 'Event Details',
         ceremony_title: 'Religious Ceremony',
         ceremony_location: 'Chiesa dei Santi Filippo e Giacomo Apostoli',
         ceremony_time: '11:00 AM',

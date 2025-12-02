@@ -28,11 +28,6 @@ html {
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-image: url('/assets/icons/flora_avorio.jpg');
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -74,7 +69,7 @@ body {
     margin: 0;
     padding: 60px 0 0 0;
     text-align: center;
-    color: #8B4513;
+    color: #330008;
     line-height: 1.6;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.1);
@@ -90,7 +85,7 @@ body {
 .quote-text {
     font-size: 18px;
     font-style: italic;
-    color: #722F37;
+    color: #330008;
     margin-bottom: 12px;
     line-height: 1.6;
     opacity: 0.9;
@@ -99,7 +94,7 @@ body {
 
 .quote-author {
     font-size: 14px;
-    color: #8B7355;
+    color: #330008;
     font-weight: 400;
     opacity: 0.8;
     letter-spacing: 0.5px;
@@ -113,14 +108,14 @@ body {
 .header-image {
     margin-bottom: 30px;
     position: relative;
-    height: 200px;
+    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .header-decoration {
-    max-width: 200px;
+    max-width: 120px;
     height: auto;
     position: absolute;
     margin: 0 auto;
@@ -206,6 +201,17 @@ body {
     /* Ready for future photo integration */
 }
 
+.wedding-details-header {
+    margin: 80px 0 60px 0;
+    text-align: center;
+}
+
+.wedding-details-header h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #330008;
+}
+
 .wedding-ceremony, .wedding-reception {
     max-width: 600px;
     margin: 60px auto;
@@ -215,7 +221,7 @@ body {
 .ceremony-details h3, .reception-details h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #722F37;
+    color: #330008;
     font-weight: 500;
 }
 
@@ -227,7 +233,7 @@ body {
 .map-link {
     display: inline-block;
     margin-top: 15px;
-    color: #8B4513;
+    color: #330008;
     text-decoration: underline;
     font-size: 14px;
     transition: opacity 0.3s;
@@ -244,7 +250,7 @@ body {
 .rsvp-section h3 {
     font-size: 24px;
     margin-bottom: 30px;
-    color: #722F37;
+    color: #330008;
 }
 
 .gift-section {
@@ -254,7 +260,7 @@ body {
 .gift-section h3 {
     font-size: 24px;
     margin-bottom: 30px;
-    color: #722F37;
+    color: #330008;
 }
 
 .gift-content {
@@ -266,7 +272,7 @@ body {
 .gift-content h4 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #8B4513;
+    color: #330008;
     font-weight: 500;
 }
 
@@ -317,13 +323,14 @@ body {
 .closing-image {
     margin-bottom: 0;
     overflow: hidden;
+    width: 100%;
 }
 
 .mountains-image {
     width: 100%;
     height: auto;
-    max-height: 400px;
-    object-fit: cover;
+    max-height: 60vh;
+    object-fit: contain;
     display: block;
     background: transparent;
     transition: transform 0.3s ease;
@@ -336,18 +343,12 @@ body {
     padding: 30px; 
 }
 .form-group { margin-bottom: 20px; }
-.form-group label { display: block; color: #8B7355; margin-bottom: 8px; font-weight: 500; }
+.form-group label { display: block; color: #330008; margin-bottom: 8px; font-weight: 500; }
 .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #D2B48C; border-radius: 4px; font-family: inherit; }
 .submit-btn { width: 100%; padding: 15px; background: #A0522D; color: white; border: none; border-radius: 4px; font-family: inherit; font-size: 16px; cursor: pointer; transition: background 0.3s; }
 .submit-btn:hover { background: #8B4513; }
 
 
-/* Mobile background fix */
-@media (max-width: 1024px) {
-    body {
-        background-attachment: scroll;
-    }
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -361,11 +362,11 @@ body {
     }
     
     .header-image {
-        height: 150px;
+        height: 120px;
     }
     
     .header-decoration {
-        max-width: 150px;
+        max-width: 90px;
     }
     
     .quote-section {
@@ -426,6 +427,14 @@ body {
         margin: 40px 0;
     }
     
+    .wedding-details-header {
+        margin: 60px 0 40px 0;
+    }
+    
+    .wedding-details-header h3 {
+        font-size: 20px;
+    }
+    
     .wedding-ceremony, .wedding-reception {
         padding: 25px;
         margin: 40px 0;
@@ -458,15 +467,9 @@ body {
     }
     
     .mountains-image {
-        max-height: 300px;
+        max-height: 50vh;
     }
-    
-    
 }
-
-    .mountains-image {
-        max-height: 250px;
-    }
 
 /* Additional responsive breakpoints */
 @media (max-width: 480px) {
@@ -480,11 +483,11 @@ body {
     }
     
     .header-image {
-        height: 120px;
+        height: 100px;
     }
     
     .header-decoration {
-        max-width: 120px;
+        max-width: 80px;
     }
     
     .quote-section {
@@ -500,10 +503,17 @@ body {
         font-size: 12px;
     }
     
-    .mountains-image {
-        max-height: 200px;
+    .wedding-details-header {
+        margin: 50px 0 30px 0;
     }
     
+    .wedding-details-header h3 {
+        font-size: 20px;
+    }
+    
+    .mountains-image {
+        max-height: 45vh;
+    }
 }
 
 @media (max-width: 320px) {
@@ -517,11 +527,11 @@ body {
     }
     
     .header-image {
-        height: 100px;
+        height: 80px;
     }
     
     .header-decoration {
-        max-width: 100px;
+        max-width: 70px;
     }
     
     .quote-section {
@@ -545,14 +555,176 @@ body {
         font-size: 18px;
     }
     
+    .wedding-details-header {
+        margin: 40px 0 25px 0;
+    }
+    
+    .wedding-details-header h3 {
+        font-size: 18px;
+    }
+    
     .mountains-image {
-        max-height: 180px;
+        max-height: 40vh;
     }
 }
 
-.label { position: absolute; top: -30px; left: 0; font-family: 'Raleway', sans-serif; font-size: 20px; color: #8B7355; }
+.label { position: absolute; top: -30px; left: 0; font-family: 'Raleway', sans-serif; font-size: 20px; color: #330008; }
 .desktop-wrapper { display: none; }
 .mobile-wrapper { display: none; }
+
+/* Navigation Styles for detail pages */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(51, 0, 8, 0.1);
+}
+
+.sticky-nav .logo {
+    font-family: 'Krakatau Mountain', serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.sticky-nav .nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.sticky-nav .nav-links a {
+    color: #330008;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s;
+}
+
+.sticky-nav .nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* Section Styles */
+.section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px;
+    color: #330008;
+}
+
+.section h2 {
+    font-family: 'Krakatau Mountain', serif;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #330008;
+}
+
+/* Wedding Details Styles */
+.wedding-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.detail-card h3 {
+    font-family: 'Krakatau Mountain', serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #330008;
+}
+
+.detail-card p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #330008;
+    line-height: 1.6;
+}
+
+.detail-card a {
+    color: #330008;
+    text-decoration: underline;
+    transition: opacity 0.3s;
+}
+
+.detail-card a:hover {
+    opacity: 0.7;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    color: #330008;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .sticky-nav {
+        padding: 12px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .sticky-nav .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .sticky-nav .nav-links a {
+        font-size: 12px;
+    }
+    
+    .section {
+        padding: 20px;
+        margin: 40px auto;
+    }
+    
+    .section h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+    
+    .wedding-details {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .detail-card {
+        padding: 20px;
+    }
+    
+    .detail-card h3 {
+        font-size: 24px;
+    }
+}
 
 /* Scroll indicator for demo */
 .scroll-indicator {
