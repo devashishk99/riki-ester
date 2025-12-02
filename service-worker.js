@@ -1,6 +1,6 @@
 const CACHE_NAME = 're-wedding-v2';
 const ASSETS = [
-  '/app.html',
+  '/index.html',
   '/assets/css/styles.css',
   '/assets/js/main.js',
   'https://unpkg.com/swiper@9/swiper-bundle.min.css',
